@@ -10,13 +10,7 @@ import { AngularFireModule } from "@angular/fire/compat";
 export const environment = {
   production:false,
  firebaseConfig :{
-  apiKey: "AIzaSyD_tyIl6M6zTkL1Xgj1-5WAsz89915PLrQ",
-  authDomain: "moengage-ba359.firebaseapp.com",
-  projectId: "moengage-ba359",
-  storageBucket: "moengage-ba359.appspot.com",
-  messagingSenderId: "59674484440",
-  appId: "1:59674484440:web:cad6b25fb17ba33e4c41ad",
-  measurementId: "G-D9PG0R87S6"}
+ //configurations shared by firebase
 };
 
 // Initialize Firebase
