@@ -1,20 +1,24 @@
-<div class="search-container">
+<div class="container">
+  <div class="search-container">
     <h2>Search Dog by Status Code</h2>
     <form [formGroup]="searchForm" (ngSubmit)="onSearch()">
       <div>
         <label for="status-code">Status Code</label>
-        <input type="text" id="status-code" formControlName="statusCode" placeholder="Enter status code (e.g., 2xx, 203)">
-        <div *ngIf="searchForm.get('statusCode')?.invalid && (searchForm.get('statusCode')?.dirty || searchForm.get('statusCode')?.touched)" class="error">
+        <input type="text" id="status-code" formControlName="statusCode"
+          placeholder="Enter status code (e.g., 2xx, 203)">
+        <div
+          *ngIf="searchForm.get('statusCode')?.invalid && (searchForm.get('statusCode')?.dirty || searchForm.get('statusCode')?.touched)"
+          class="error">
           Please enter a valid status code.
         </div>
       </div>
       <button type="submit" [disabled]="searchForm.invalid">Search</button>
     </form>
-  
+
     <div *ngIf="errorMessage" class="error-message">
       {{ errorMessage }}
     </div>
-  
+
     <div *ngIf="filteredDogs.length" class="dog-list">
       <h3>Dog List</h3>
       <div *ngFor="let dog of filteredDogs">
@@ -30,9 +34,8 @@
     <h3>Saved Dogs</h3>
     <ul>
       <li *ngFor="let savedDog of savedDogs"><img *ngIf="savedDog.image?.jpg" [src]="savedDog.image.jpg" alt="">
-      <!-- <div *ngFor="let save of savedDogs"> -->
-      <button *ngIf="savedDog.image?.jpg"  (click)="deleteDog(savedDog)">Delete</button>
-<!-- </div> --></li>
+        <button *ngIf="savedDog.image?.jpg" (click)="deleteDog(savedDog)">Delete</button>
+      </li>
     </ul>
   </div>
-  
+</div>

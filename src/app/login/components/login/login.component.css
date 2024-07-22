@@ -1,15 +1,16 @@
 /* src/app/login/login.component.css */
 .login-container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 1rem;
-    /* border: 1px solid #ccc; */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    /* background: antiquewhite; */
-    height: 681px;
-    }
-    /* .login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1rem;
+  /* border: 1px solid #ccc; */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* background: antiquewhite; */
+  height: 681px;
+}
+
+/* .login-container {
       max-width: 400px;
       margin: auto;
       padding: 213px;
@@ -19,179 +20,191 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
      */
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    
-    /* form {
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* form {
       display: grid;
       gap: 10px;
     } */
-    /* form{
+/* form{
       display: flex;
       gap: 32px;
       flex-direction: column;
       flex-wrap: nowrap;
       justify-content: space-between;
   } */
-    
-    label {
-      font-weight: bold;
-    }
-    
-    input[type="email"],
-    input[type="password"],input[type="text"] {
-      width: 94%;
-      padding: 10px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      margin: 25px 0px;
-    }
-    button{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-    }
-    
-    
-    .error {
-      color: red;
-      font-size: 14px;
-    }
-    
-    .password-container {
-      position: relative;
-    }
-    
-    .password-toggle {
-      position: absolute;
-      top: 50%;
-      right: 10px;
-      transform: translateY(-50%);
-      border: none;
-      background: none;
-      cursor: pointer;
-    }
-    
-    .password-toggle i {
-      font-size: 1.2rem;
-      color: #ccc;
-    }
-    
-    .password-toggle i:hover {
-      color: #333;
-    }
-    
-    button[type="submit"] {
-      width: 5rem;
-      padding: 10px;
-      font-size: 16px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    
-    button[type="submit"]:hover {
-      background-color: #0056b3;
-    }
-    .button-class{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .forgot-password{
-      text-decoration: underline;
-      color: rgb(45, 45, 144);
-      display: flex;
-      justify-content: flex-end;
-      cursor: pointer;
-    }
-    .forgot-password:hover{
-      color: black;
-      cursor: pointer;
-    }
-    .account{
 
-      display: flex;
-      justify-content: flex-end;
-      cursor: pointer;
-    }
-    .foot {
-      display: flex;
-      height: 10rem;
-      /* background-color: rgb(66, 66, 85); */
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      width: auto;
-      margin-top: 140px;
-      border-top: 3px solid red;
-    }
+label {
+  font-weight: bold;
+}
 
-    /* hr {
-      border: 1px solid red;
-      width: 290px;
-    } */
-    .googlefoot {
-      font-size: small;
-      background-color: rgb(87, 183, 221);
-      border-radius: 5px;
-      margin-top: 20px;
-      width: 20%;
-      display: flex;
-      text-align: center;
-      flex-direction: row;
-      padding: 3px 15px 3px 15px;
-      margin-top: 40px;
-      width: auto;
-    }
-    .facebookfoot {
-      background-color: rgb(87, 183, 221);
-      border-radius: 5px;
-      margin-top: 20px;
-      width: 20%;
-      padding: 4px;
-      display: flex;
-      text-align: center;
-      flex-direction: row;
-      width: auto;
-    }
-    .fa-google {
-      background: #dd4b39;
-      color: white;
-      font-size: 13px;
-    }
-    .fa-brands {
-      padding-top: 9px;
-      padding-bottom: 5px;
-      font-size: 20px;
-      width: 34px;
-      text-align: center;
-      text-decoration: none;
-      margin: 5px;
-    }
-    .fa-facebook {
-      background: #3b5998;
-      color: white;
-      padding-top: 10px;
-    }
-    .googlefoot a {
-      text-decoration: none;
-    }
-    .googlefoot h5 {
-      margin-top: 10px;
-      color: blue;
-      font-size: 13px;
-    }
-    .facebookfoot a {
-      text-decoration: none;
-    }
-    .facebookfoot h5 {
-      margin-top: 10px;
-      color: blue;
-      font-size: 13px;
-    }
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  width: 94%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 25px 0px;
+}
+
+button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+.password-container {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.password-toggle i {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.password-toggle i:hover {
+  color: #333;
+}
+
+button[type="submit"] {
+  width: 5rem;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.button-class {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.forgot-password {
+  text-decoration: underline;
+  color: rgb(45, 45, 144);
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.forgot-password:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.account {
+
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+.foot {
+  display: flex;
+  height: 10rem;
+  /* background-color: rgb(66, 66, 85); */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  margin-top: 140px;
+  border-top: 3px solid red;
+}
+
+
+.googlefoot {
+  font-size: small;
+  background-color: rgb(87, 183, 221);
+  border-radius: 5px;
+  margin-top: 20px;
+  width: 20%;
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  padding: 3px 15px 3px 15px;
+  margin-top: 40px;
+  width: auto;
+}
+
+.facebookfoot {
+  background-color: rgb(87, 183, 221);
+  border-radius: 5px;
+  margin-top: 20px;
+  width: 20%;
+  padding: 4px;
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  width: auto;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+  font-size: 13px;
+}
+
+.fa-brands {
+  padding-top: 9px;
+  padding-bottom: 5px;
+  font-size: 20px;
+  width: 34px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+  padding-top: 10px;
+}
+
+.googlefoot a {
+  text-decoration: none;
+}
+
+.googlefoot h5 {
+  margin-top: 10px;
+  color: blue;
+  font-size: 13px;
+}
+
+.facebookfoot a {
+  text-decoration: none;
+}
+
+.facebookfoot h5 {
+  margin-top: 10px;
+  color: blue;
+  font-size: 13px;
+}

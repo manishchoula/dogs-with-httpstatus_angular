@@ -1,20 +1,20 @@
+import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../../services/auth.service';
-import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-signup',
   standalone: true,
-  imports: [ReactiveFormsModule,NgIf],
+  imports: [ReactiveFormsModule, NgIf],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.css'
 })
 export class SignupComponent {
   signupForm: FormGroup;
 
-  constructor(private fb: FormBuilder,private authService:AuthService,private router:Router) {
+  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
     this.signupForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -25,12 +25,10 @@ export class SignupComponent {
   onSubmit() {
     if (this.signupForm.valid) {
       const { email, password } = this.signupForm.value;
-      this.authService.registerWithEmailAndPassword({ email, password})
+      this.authService.registerWithEmailAndPassword({ email, password })
         .then(response => {
           console.log('User created successfully!', response.user);
           alert('User created successfully!');
-          // this.toatserService.showSuccess("Successfully loged in");
-          // setTimeout(()=>this.router.navigate(['/login']),2000)
           this.router.navigate(['/login']);
         })
         .catch(error => {
@@ -39,6 +37,6 @@ export class SignupComponent {
     } else {
       console.log('Form is invalid');
     }
-  
+
   }
 }
