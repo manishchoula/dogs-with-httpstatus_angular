@@ -1,0 +1,57 @@
+<!-- <p>login works!</p> -->
+
+<div  class="login-container">
+    <h2>Login</h2>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div >
+        <label for="user-email">Email</label>
+        <input type="email" id="user-email" formControlName="email">
+        <div *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)" class="error">
+          Valid email is required.
+        </div>
+      </div>
+  
+      <div>
+        <label for="user-password">Password</label>
+        <div class="password-container">
+          <input type="password" id="user-password" formControlName="password" [type]="hidePassword ? 'password' : 'text'">
+          <button type="button" (click)="togglePasswordVisibility()" class="password-toggle">
+            <i class="fa" [ngClass]="{'fa-eye': hidePassword, 'fa-eye-slash': !hidePassword}" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)" class="error">
+          Password is required.
+        </div>
+      </div>
+      <div class="forgot-password" (click)="forgotPassword()">forgot-password</div>
+      <div class="account" (click)="routeToSignUp()">create an account?</div>
+  <div class="button-class"> <button type="submit"  [disabled]="loginForm.invalid">Login</button></div>
+  <div class="foot">
+    <!-- <hr /> -->
+    <div class="googlefoot">
+      <a
+        href="https://accounts.google.com/v3/signin/identifier?hl=en-gb&ifkv=ASKXGp2YwoWacqq3s6c3lTtiJuFkUalm5BACjSVH998fXINOHUdWuWze4h9E0gDQRYd1jd1LlrUxGg&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S167858368%3A1700659324867331&theme=glif"
+        target="_blank"
+        class="fa-brands fa-google"
+      ></a>
+      <a
+        href="https://accounts.google.com/v3/signin/identifier?hl=en-gb&ifkv=ASKXGp2YwoWacqq3s6c3lTtiJuFkUalm5BACjSVH998fXINOHUdWuWze4h9E0gDQRYd1jd1LlrUxGg&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S167858368%3A1700659324867331&theme=glif"
+        target="_blank"
+        ><h5>continue with google</h5></a
+      >
+    </div>
+    <div class="facebookfoot">
+      <a
+        href="https://www.facebook.com/"
+        target="_blank"
+        class="fa-brands fa-facebook"
+      ></a>
+      <a href="https://www.facebook.com/" target="_blank"
+        ><h5>continue with Facebook</h5></a
+      >
+    </div>
+  </div>
+     
+    </form>
+  </div>
+  
